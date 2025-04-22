@@ -8,24 +8,58 @@
 
 body {
     height: 100vh;
-    background: #2A7B9B;
-    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    z-index: 1;
+    background: #c79191;
+background: linear-gradient(90deg, rgba(199, 145, 145, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }
-.container {
-   position: absolute;
-   width: 50%;
-   min-width: 580px;
-   transform: translate(-50%, -50%);
-   top: 50%;
-   left: 50%;
-   background-color: #ffffff;
-   padding: 50px 10px;
-   border-radius: 5px;
-   display:grid;
-   justify-items: center;
-   font-family: 'Poppins', sans-serif;
 
+.container {
+   margin: 0 auto;
+   width: 800px;
+   top: 25%;
+   background-color: #ffffff;
+   padding: 2em;
+   border-radius: 5px;
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   position: relative;
 }
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.container::after, .container::before{
+    content: "";
+    position: absolute;
+    width: 101%;
+    height: 102%;
+    background-image: conic-gradient(from var(--angle),transparent 50%, blue);
+    margin: 0 auto;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 5px;
+    animation: 3s spin linear infinite;
+
+    
+}
+
+.container::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+    
 
 h3{
     font-size: 16px;
@@ -43,6 +77,7 @@ input[type="number"]{
     border: 2px solid #2A7B9B;
     font-size: 28px;
 }
+
 
 button{
     width: 160px;

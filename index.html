@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>Jeu de Devinette - Niveaux</title>
 </head>
 <body>
   <div class="container">
+
      <h3>Je pense à un nombre entre 1 et 100</h3>
      <h3>Pouvez-vous le deviner ?</h3>
      
@@ -17,7 +19,7 @@
         <option value="hard">Difficile (1 tentative)</option>
      </select>
 
-     <input type="number" id="guess" min="1" max="100">
+     <input type="number" id="guess" placeholder="numero" min="1" max="100">
      <button onclick="play()">Deviner</button>
      <button id="replayButton" onclick="replayGame()" style="display: none;">Rejouer</button>
 
@@ -25,6 +27,5 @@
      <p class="message2">Nombres essayés : aucun</p>
      <p class="message3"></p>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
