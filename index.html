@@ -4,17 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Jeu de Devinette</title>
+  <title>Jeu de Devinette - Niveaux</title>
 </head>
 <body>
   <div class="container">
- 
      <h3>Je pense à un nombre entre 1 et 100</h3>
      <h3>Pouvez-vous le deviner ?</h3>
-     <input type="number" id="guess" placeholder="nombre">
-     <button onclick="play()" id="my_btn">Deviner</button>
+     
+     <select id="difficulty" onchange="setDifficulty()">
+        <option value="easy">Facile (3 tentatives)</option>
+        <option value="medium">Moyen (2 tentatives)</option>
+        <option value="hard">Difficile (1 tentative)</option>
+     </select>
 
-     <p class="message1">Nombre de tentatives : 0</p>
+     <input type="number" id="guess" min="1" max="100">
+     <button onclick="play()">Deviner</button>
+     <button id="replayButton" onclick="replayGame()" style="display: none;">Rejouer</button>
+
+     <p class="message1">Nombre de tentatives : 0/3</p>
      <p class="message2">Nombres essayés : aucun</p>
      <p class="message3"></p>
   </div>
