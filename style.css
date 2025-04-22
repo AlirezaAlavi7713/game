@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.container {
+   position: absolute;
+   width: 50%;
+   min-width: 580px;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   background-color: #ffffff;
+   padding: 50px 10px;
+   border-radius: 5px;
+   display:grid;
+   justify-items: center;
+   font-family: 'Poppins', sans-serif;
+
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input[type="number"]{
+    width: 90%;
+    font-weight: 600;
+    color: #2a7b9b;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 2px solid #2A7B9B;
+    font-size: 28px;
+}
+
+button{
+    width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    background-color: #2A7B9B;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+p {
+    font-weight: 400;
+}
+
+
+
+
+
+
+
