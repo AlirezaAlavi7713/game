@@ -9,24 +9,24 @@ var guess_num = [];
 function play(){
     var user_guess = document.getElementById('guess').value;
     if(user_guess < 1 || user_guess > 100){
-        alert("please enter a number between 1 and 100");
+        alert("Veuillez entrer un nombre entre 1 et 100");
     } else {
         guess_num.push(user_guess);
         no_of_guess+= 1;
         if(user_guess < answer){
-            msg1.textContent = "your guess is too low";
-            msg2.textContent = "no of guess" + no_of_guess;
-            msg3.textContent = "guess number" + guess_num;
+            msg1.textContent = "Votre nombre est trop bas";
+            msg2.textContent = "Nombre de tentatives : " + no_of_guess;
+            msg3.textContent = "Nombres essayés : " + guess_num;
         }
         else if(user_guess > answer){
-            msg1.textContent = "your guess is too high";
-            msg2.textContent = "no of guess" + no_of_guess;
-            msg3.textContent = "guess number" + guess_num;
+            msg1.textContent = "Votre nombre est trop haut";
+            msg2.textContent = "Nombre de tentatives : " + no_of_guess;
+            msg3.textContent = "Nombres essayés : " + guess_num;
         }
         else if(user_guess == answer){
-            msg1.textContent = "congratulation you guessed the number";
-            msg2.textContent = "the number was: " + answer;
-            msg3.textContent = "you guessed it in " + no_of_guess + " guesses";
+            msg1.textContent = "Félicitations ! Vous avez trouvé le nombre";
+            msg2.textContent = "Le nombre était : " + answer;
+            msg3.textContent = "Vous l'avez trouvé en " + no_of_guess + " tentatives";
             document.getElementById('guess').disabled = true;
             document.getElementById('guess').style.backgroundColor = 'grey';
         }
